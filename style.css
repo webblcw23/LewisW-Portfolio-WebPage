@@ -84,13 +84,13 @@ section {
 .project-card {
   display: grid;
   grid-template-columns: 120px 1fr;
-  background: white;
-  margin-bottom: 20px;
+  gap: 20px;
+  align-items: start; /* 👈 This is the key line */
   padding: 20px;
   border-radius: 12px;
+  background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  gap: 20px;
-  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card img {
@@ -99,26 +99,26 @@ section {
   max-height: 120px;
   object-fit: contain;
   border-radius: 8px;
+  color: white;
 }
 
-
-.project-card h3 {
-  margin: 0 0 10px;
-  color: #0078D4;
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
 
-.project-card p {
-  margin: 0 0 10px;
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #f0f8ff;
 }
 
-.project-card a {
-  color: #0078D4;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
+.project-card:hover .project-content h3,
+.project-card:hover .project-content p,
+.project-card:hover .project-content a {
+  font-weight: 600;
+  color: #000000;
 }
 
 /* Contact styling */
@@ -188,4 +188,43 @@ footer {
   height: 16px;
   object-fit: contain;
 }
+
+.badges span:hover {
+  background-color: #0078D4;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.project-detail {
+  display: none;
+}
+
+.project-detail.active {
+  display: block;
+}
+
+.project-detail img {
+  max-width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-detail button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.project-detail {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
+
 
