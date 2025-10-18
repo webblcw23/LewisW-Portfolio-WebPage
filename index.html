@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lewis | Azure Platform Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav>
+    <button onclick="showTab('about')">About Me</button>
+    <button onclick="showTab('projects')">Projects</button>
+    <button onclick="showTab('contact')">Contact</button>
+  </nav>
+
+  <div id="about" class="tab active">
+    <header>
+      <img src="assets/ProfilePic.jpg" alt="Lewis">
+      <div>
+        <h1>Hi, I'm Lewis 👋</h1>
+        <p>Cloud-native DevOps engineer specializing in secure Azure infrastructure.</p>
+      </div>
+    </header>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m Lewis Webb, a Platform Engineer with over five years of experience in automating, maintaining, and supporting enterprise platforms — and a real passion for cloud technologies and DevOps practices.</p>
+      <p>After graduating from Glasgow Caledonian University with a 2:1 in Computer Games Design, I joined FDM Group, completing 14 weeks of intensive technical training before being placed at abrdn (formerly Aberdeen Asset Management and now Aberdeen).</p>
+      <p>At abrdn, I spent over five years building and optimising large-scale platforms — maintaining 200 + Windows Server environments, automating deployments through Azure DevOps, and scripting in PowerShell to streamline operations and batch processes. I worked closely with a large mix of teams to ensure reliability, efficiency for business-critical systems, helping deliver projects that supported over £300bn in managed assets. One of my key achievements was automating configuration deployments across 200+ servers for the CRIMS 21r1 upgrade from 18r2, cutting delivery time by 90% and reducing manual errors dramatically.</p>
+      <p>Following redundancy in late 2024, I’ve focused on upskilling into cloud engineering, earning my Microsoft Certified: Azure Administrator (AZ-104) certification and developing real-world Azure projects. These include deploying production-style infrastructure in Azure with Terraform as IaC, building CI/CD pipelines in Azure DevOps, and exploring containerisation through Docker and Azure Kubernetes Service (AKS). I continue to develop my skillset and create new projects as well as build upon my existing ones./p>
+      <p>Now, I’m looking to bring together my strong foundation in on prem enterprise systems and my growing cloud expertise in a Cloud, Platform, or DevOps Engineer role — where I can continue learning, contribute to modern infrastructure solutions, and help teams deliver reliable, automated platforms at scale.</p>
+      <p>Please have a look at my project work in the Project section and I would love to speak futher on any job opportunities you might have - please find my contact details in the Contact section.</p>
+    </section>
+
+  <section>
+  <h2>Skillset</h2>
+  <ul class="skills">
+    <li>Azure Cloud (infrastructure and resrouce management) </li>
+    <li>Azure App Service & AKS (containerisation, scalable deployments)</li>
+    <li>Terraform (modular infrastructure, NSGs, Private Endpoints)</li>
+    <li>Azure DevOps (CI/CD pipelines, YAML, release automation)</li>
+    <li>Azure Networking (VNet design, subnet isolation, Bastion access)</li>
+    <li>RBAC & Access Control (role assignments, group-based security)</li>
+    <li>Managed Identity & Key Vault integration (secure secret storage and retrieval)</li>
+    <li>PowerShell (scripting for automation and validation)</li>
+    <li>SQL (Database and data management)</li>
+  </ul>
+</section>
+  </div>
+
+
+  <div id="projects" class="tab">
+    <section>
+      <h2>Featured Projects</h2>
+
+
+      <div class="project-card">
+        <img src="assets/keyvault.png" alt="KeyVaultLab">
+        <div>
+          <h3>🔐 KeyVaultLab</h3>
+          <p>Secure secret retrieval using Managed Identity, Private Endpoint, and Key Vault integration.</p>
+          <p>This lab demonstrates secure secret retrieval using Azure Key Vault and Managed Identity. The .NET 8 API runs on Azure App Service (Linux) and pulls sensitive config from Key Vault via a system-assigned identity. All infrastructure is provisioned with Terraform for reproducibility and security-first architecture.</p>
+          <div class="badges">
+          <span><img src="assets/icons/terraform.png" alt="Terraform"> Terraform</span>
+          <span><img src="assets/icons/devops.png" alt="Azure DevOps"> Azure DevOps</span>
+          <span><img src="assets/icons/keyvault.png" alt="Key Vault"> Key Vault</span>
+           <span><img src="assets/icons/webapp.png" alt="Azure Web App"> Web App</span>
+            <span><img src="assets/icons/docker.png" alt="Docker"> Docker</span>
+        </div>
+          <a href="https://github.com/webblcw23/KeyVaultLab" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <img src="assets/webapplogo.png" alt="Rangers App">
+        <div>
+          <h3>⚽ Football Results App</h3>
+          <p>Football results app utilising Docker and Web App Service frontend. Includes CI/CD pipeline and runtime validation.</p>
+          <p>A football results app built with and containerised using Docker and deployed to Azure Web App Service. It features a CI/CD pipeline via Azure DevOps and includes runtime validation scripting. This project showcases the full software lifecycle with Docker, frontend deployment, and real-world data handling in a streamlined, no-nonsence cloud-native setup.</p>
+          <div class="badges">
+          <span><img src="assets/icons/terraform.png" alt="Terraform"> Terraform</span>
+          <span><img src="assets/icons/azuredevops.png" alt="Azure DevOps"> Azure DevOps</span>
+          <span><img src="assets/icons/keyvault.png" alt="Key Vault"> Key Vault</span>
+          <span><img src="assets/icons/webapp.png" alt="Azure Web App"> Web App</span>
+          <span><img src="assets/icons/docker.png" alt="Docker"> Docker</span>
+        </div>
+          <a href="https://github.com/webblcw23/FootballResultsApp" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <img src="assets/rangersaks.png" alt="Rangers App + AKS">
+        <div>
+          <h3>🧱 Football Results App + AKS</h3>
+          <p>Containerized deployment of the Football Results App using Azure Kubernetes Service. Includes YAML manifests, AKS node pool config, and secure ingress.</p>
+          <p>This project reimagines the Football Results App with full containerization and AKS deployment. It includes YAML manifests, node pool configuration, and secure ingress via Azure networking. The infrastructure is modular and built for scale, with Terraform and DevOps automation throughout.</p>
+          <div class="badges">
+          <span><img src="assets/icons/terraform.png" alt="Terraform"> Terraform</span>
+          <span><img src="assets/icons/azuredevops.png" alt="Azure DevOps"> Azure DevOps</span>
+          <span><img src="assets/icons/keyvault.png" alt="Key Vault"> Key Vault</span>
+          <span><img src="assets/icons/docker.png" alt="Docker"> Docker</span>
+          <span><img src="assets/icons/aks.png" alt="Key Vault"> AKS</span>
+        </div>      
+          <a href="https://github.com/webblcw23/FootballResultsApp-AKS" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+
+      <div class="project-card">
+        <img src="assets/networklogo.png" alt="Classic Network Infra">
+        <div>
+          <h3>🌐 Classic Network Infra</h3>
+          <p>Multi-tier Azure network with Bastion access, NSGs, subnet isolation, and RBAC-based access control.</p>
+          <p>A multi-tier Azure network built with Bastion access, NSGs, subnet isolation, and RBAC-based access control. This project reflects enterprise-grade security architecture and modular Terraform design, with clear documentation for recruiter-facing clarity.</p>
+        <div class="badges">
+          <span><img src="assets/icons/terraform.png" alt="NSG"> NSG</span>
+          <span><img src="assets/icons/bastion.png" alt="Bation"> Bastion</span>
+          <span><img src="assets/icons/rbac.png" alt="RBAC"> RBAC</span>
+           <span><img src="assets/icons/terraform.png" alt="Terraform"> Terraform</span>
+        </div>
+          <a href="https://github.com/webblcw23/Network-Proj" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+  <div id="contact" class="tab">
+    <section>
+      <h2>Contact Me</h2>
+      <p><strong>📱 Mobile:</strong> 07754123174</p>
+      <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/lewis-webb-5a99b4203" target="_blank">LinkedIn Profile</a></p>
+      <p><strong>📧 Email:</strong> <a href="mailto:webblcw23@gmail.com">webblcw23@gmail.com</a></p>
+    </section>
+  </div>
+
+
+
+
+
+
+  <footer>
+    <p>Built with ❤️ on Azure App Service</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
