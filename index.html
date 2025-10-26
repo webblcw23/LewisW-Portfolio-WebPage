@@ -15,8 +15,6 @@
     <button onclick="showTab('contact')">Contact</button>
   </nav>
 
-  <!-- About Me Page ------------------------------------------------------->
-
   <div id="about" class="tab active">
     <header>
       <img src="assets/ProfilePic.jpg" alt="Lewis">
@@ -50,8 +48,6 @@
         opportunities you might have — please find my contact details in the Contact section.</p>
     </section>
 
-    <!-- Skill List ------------------------------------------------------->
-
     <section>
       <h2>Skillset</h2>
       <ul class="skills">
@@ -68,8 +64,6 @@
     </section>
   </div>
 
-
-  <!-- Projects Page ------------------------------------------------------->
 
   <div id="projects" class="tab">
     <section>
@@ -162,13 +156,7 @@
 
     </section>
   </div>
-  </div>
-</body>
-
-
-<!-- Projects Screenshots section ------------------------------------------------------->
-
-<div id="webapp-more" class="tab project-detail">
+  <div id="webapp-more" class="tab project-detail">
   <section>
     <h2>⚽️ Football Results App Web App Screenshots</h2>
     <button onclick="showTab('projects')">← Back to Projects</button>
@@ -235,21 +223,33 @@
   </section>
 </div>
 
-
-
-
-<!-- Contact Me Page ------------------------------------------------------->
+<!------- Contact me section ------------->
 
 <div id="contact" class="tab">
-  <section>
+  <section class="contact-section-layout">
     <h2>Contact Me</h2>
-    <p><strong>📱 Mobile:</strong> 07754123174</p>
-    <p><strong>📧 Email:</strong> webblcw23@gmail.com</p>
-    <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/lewis-webb-5a99b4203/"
-        target="_blank">LinkedIn - Lewis Webb</a></p>
-    <p><strong>💼 GitHub:</strong> <a href="https://github.com/webblcw23" target="_blank">GitHub - Webblcw23</a></p>
+
+    <div class="content-wrapper">
+      <div class="contact-details-column">
+        <p><strong>📱 Mobile:</strong> 07754123174</p>
+        <p><strong>📧 Email:</strong> webblcw23@gmail.com</p>
+        <p><strong>💼 LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/lewis-webb-5a99b4203/" target="_blank">LinkedIn - Lewis Webb</a>
+        </p>
+        <p><strong>💼 GitHub:</strong>
+          <a href="https://github.com/webblcw23" target="_blank">GitHub - Webblcw23</a>
+        </p>
+      </div>
+
+      <div class="image-column">
+        <img src="assets/meforport.png" alt="Lewis Webb headshot">
+      </div>
+    </div>
   </section>
 </div>
+
+<!---------------------------------------->
+
 <script>
   function showTab(tabId) {
     document.querySelectorAll('.tab, .project-detail').forEach(tab => {
